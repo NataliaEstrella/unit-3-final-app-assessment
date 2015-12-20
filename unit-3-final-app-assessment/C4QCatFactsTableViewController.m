@@ -10,6 +10,8 @@
 #import <AFNetworking/AFNetworking.h>
 #import "CATFact.h"
 #import "C4QCatFactsDetailViewController.h"
+#import "TableViewCell.h"
+
 
 #define CAT_API_URL @"http://catfacts-api.appspot.com/api/facts?number=100"
 
@@ -27,8 +29,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self catFactRequest];
+    
+        [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"CustomCellID"];
 
     self.factsArray = [[NSMutableArray alloc] init];
+}
+- (IBAction)saveButtonTapped:(id)sender {
+
+
+
+
+
+    
 }
 
 -(void) catFactRequest {
@@ -52,23 +64,12 @@
              NSLog(@"JSON: %@", self.results);
              NSLog(@"Success: %@", responseObject);
              
-             for (NSString *fact in self.results) {
-                 [self.factsArray addObject:fact];
+             for (NSString *result in self.results) {
+                 [self.factsArray addObject:result];
              }
              
              [self.tableView reloadData];
              
-//             for (NSDictionary *result in self.results) {
-//                 CATFact *object = [[CATFact alloc]init];
-//
-//                 
-//                 // somthing is wrong here !!!!!
-//                 object.fact = [result objectForKey:@"facts"];
-////                 [self.factsArray addObject:object];
-//                 
-//
-//             }
-
      }
          failure:^(NSURLSessionDataTask *task, NSError *error)
      {
@@ -91,15 +92,27 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CatFactIdentifier" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.factsArray[indexPath.row];
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCellID"];
+
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CatFactIdentifier" forIndexPath:indexPath];
+    
+    cell.factLabel.text = self.factsArray[indexPath.row];
     
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    [self performSegueWithIdentifier:@"WeatherDetailSegue" sender:self];
+    [self performSegueWithIdentifier:@"detailView" sender:indexPath];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return UITableViewAutomaticDimension;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
     if ([segue.identifier isEqualToString:@"detailView"]) {
 
@@ -107,6 +120,7 @@
         
         vc.fact = self.factsArray[indexPath.row];
     }
+    
     
 }
 

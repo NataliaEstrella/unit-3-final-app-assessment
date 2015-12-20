@@ -10,7 +10,6 @@
 
 @interface CATFact : NSObject
 
-@property (nonatomic) NSString *fact;
 
 
 @end
