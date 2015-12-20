@@ -10,6 +10,7 @@
 		51B9E80B1C2695840040724A /* CATFact.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9E80A1C2695840040724A /* CATFact.m */; };
 		51F5B8861C272FEB00DEB1E1 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B8841C272FEB00DEB1E1 /* TableViewCell.m */; };
 		51F5B8871C272FEB00DEB1E1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F5B8851C272FEB00DEB1E1 /* TableViewCell.xib */; };
+		51F5B8901C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B88F1C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m */; };
 		8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */; };
 		8D610EA11C2477EB00AADDC2 /* C4QColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E971C2477EB00AADDC2 /* C4QColorPickerViewController.m */; };
 		8D610EA21C2477EB00AADDC2 /* C4QRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E991C2477EB00AADDC2 /* C4QRootViewController.m */; };
@@ -32,6 +33,8 @@
 		51F5B8831C272FEB00DEB1E1 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		51F5B8841C272FEB00DEB1E1 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		51F5B8851C272FEB00DEB1E1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		51F5B88E1C274ED600DEB1E1 /* C4QSavedFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QSavedFactsTableViewController.h; sourceTree = "<group>"; };
+		51F5B88F1C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QSavedFactsTableViewController.m; sourceTree = "<group>"; };
 		8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QCatFactsTableViewController.h; sourceTree = "<group>"; };
 		8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QCatFactsTableViewController.m; sourceTree = "<group>"; };
 		8D610E961C2477EB00AADDC2 /* C4QColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QColorPickerViewController.h; sourceTree = "<group>"; };
@@ -114,12 +117,14 @@
 				8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */,
 				8DA03F721C2499F400328B53 /* C4QCatFactsDetailViewController.h */,
 				8DA03F731C2499F400328B53 /* C4QCatFactsDetailViewController.m */,
+				51F5B88E1C274ED600DEB1E1 /* C4QSavedFactsTableViewController.h */,
+				51F5B88F1C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m */,
+				8D87530C1C24774700BBD328 /* Main.storyboard */,
 				51F5B8831C272FEB00DEB1E1 /* TableViewCell.h */,
 				51F5B8841C272FEB00DEB1E1 /* TableViewCell.m */,
 				51F5B8851C272FEB00DEB1E1 /* TableViewCell.xib */,
 				51B9E8091C2695840040724A /* CATFact.h */,
 				51B9E80A1C2695840040724A /* CATFact.m */,
-				8D87530C1C24774700BBD328 /* Main.storyboard */,
 				8D87530F1C24774800BBD328 /* Assets.xcassets */,
 				8D8753031C24774700BBD328 /* Supporting Files */,
 			);
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F5B8901C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m in Sources */,
 				8D8753081C24774700BBD328 /* AppDelegate.m in Sources */,
 				8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */,
 				51B9E80B1C2695840040724A /* CATFact.m in Sources */,

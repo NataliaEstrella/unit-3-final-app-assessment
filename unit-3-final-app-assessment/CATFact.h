@@ -11,5 +11,7 @@
 @interface CATFact : NSObject
 
 
+@property (nonatomic) NSString *catFact;
+
 
 @end

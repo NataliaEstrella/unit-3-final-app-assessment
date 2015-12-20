@@ -170,6 +170,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Saved" id="H5K-RC-luN">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="Q41-6z-oZL" id="Dbh-6H-56N"/>
+                                <segue destination="BMY-SD-GTn" kind="show" id="a5i-XF-UGi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -177,6 +178,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yux-EA-lvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1356" y="677"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="7Lj-qI-bDK">
+            <objects>
+                <tableViewController id="BMY-SD-GTn" customClass="C4QSavedFactsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wya-8v-1Ia">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SavedCellIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" id="yZS-W5-9ri">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yZS-W5-9ri" id="gIL-hj-2tr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BMY-SD-GTn" id="POi-Yp-Rv3"/>
+                            <outlet property="delegate" destination="BMY-SD-GTn" id="FEJ-fs-Y2p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="9Jt-je-NZ6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gc2-1Z-pAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2172" y="677"/>
         </scene>
         <!--Cat Facts Detail View Controller-->
         <scene sceneID="2IZ-Lb-NYW">
@@ -229,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="New-CQ-w3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2195" y="685"/>
+            <point key="canvasLocation" x="1363" y="1531"/>
         </scene>
     </scenes>
 </document>

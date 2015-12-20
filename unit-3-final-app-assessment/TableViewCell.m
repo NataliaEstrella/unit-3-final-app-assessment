@@ -32,6 +32,13 @@
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:ok];
     [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:alertController animated:YES completion:nil];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.factLabel.text forKey: @"factLabel"];
+    
+    
+//    self.factLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"factLabel"];
+
 
 }
 

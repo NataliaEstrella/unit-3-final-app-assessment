@@ -95,7 +95,7 @@
     
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCellID"];
 
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CatFactIdentifier" forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
     
     cell.factLabel.text = self.factsArray[indexPath.row];
     
