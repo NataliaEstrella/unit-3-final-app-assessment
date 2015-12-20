@@ -132,8 +132,9 @@
 - (instancetype)init {
     NSURLSessionConfiguration *defaultConfiguration = [self.class defaultURLSessionConfiguration];
     AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:defaultConfiguration];
-    sessionManager.responseSerializer = [AFImageResponseSerializer serializer];
-
+//    sessionManager.responseSerializer = [AFImageResponseSerializer serializer];
+    
+ sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     return [self initWithSessionManager:sessionManager
                  downloadPrioritization:AFImageDownloadPrioritizationFIFO
                  maximumActiveDownloads:4

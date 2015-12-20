@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColorPickerViewControllerDelegate.h"
 
 @interface C4QColorPickerViewController : UIViewController
+
+@property (nonatomic, weak) id <ColorPickerViewControllerDelegate> delegate;
+
 
 @end
