@@ -9,7 +9,7 @@
 #import "C4QCatFactsTableViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import "CATFact.h"
-
+#import "C4QCatFactsDetailViewController.h"
 
 #define CAT_API_URL @"http://catfacts-api.appspot.com/api/facts?number=100"
 
@@ -97,6 +97,19 @@
     
     return cell;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString:@"detailView"]) {
+
+        C4QCatFactsDetailViewController *vc = segue.destinationViewController;
+        
+        vc.fact = self.factsArray[indexPath.row];
+    }
+    
+}
+
 
 
 @end

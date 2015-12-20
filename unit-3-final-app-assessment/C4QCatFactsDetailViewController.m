@@ -12,13 +12,16 @@
 
 @interface C4QCatFactsDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *factLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *kittyImage;
+
 @end
 
 @implementation C4QCatFactsDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.factLabel.text = self.fact; 
 }
 
 - (void)didReceiveMemoryWarning {
