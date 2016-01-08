@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *factLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *cellButton;
+
+
 @end

@@ -68,6 +68,11 @@
                  NSString *imageURL = [[[object objectForKey:@"images"]objectForKey:@"original_still"]objectForKey:@"url"];
                  
                  NSData * catData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageURL]];
+
+                 
+                 //dispatch_async(<#dispatch_queue_t queue#>, <#^(void)block#>)
+
+                 
                  self.kittyImage.image = [UIImage imageWithData:catData];
 
 
@@ -85,62 +90,4 @@
     
     
     
-    
-    
-/////////////////////////////////////////////////////////
-//    NSString *catFacts = [NSString stringWithFormat:@"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC"];
-//    
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
-//    
-//    
-//    
-//    [manager GET:catFacts
-//     
-//      parameters:nil
-//        progress:nil
-//         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//             
-////             self.results = [[responseObject objectForKey:@"data"] objectForKey:@"images"];
-//             
-//             self.results = [responseObject [@"data"]firstObject ];
-//             NSLog(@"JSON: %@", self.results);
-//             NSLog(@"Success: %@", responseObject);
-////
-//             for (NSDictionary *result in self.results) {
-//                 NSString *imageURLString = [[[[result objectForKey:@"data"]objectForKey:@"images"]objectForKey:@"original"] objectForKey:@"url"];
-//                 
-//
-////                 NSString *imageURLString = [result[@"data"] firstObject][@"images"][@"original"][@"url"];
-//                 
-////                 NSString *imageURLString = [result objectForKey:@"url"];
-//                 NSURL *imageURL = [NSURL URLWithString:imageURLString];
-//                
-//                 NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-//                 UIImage *image = [UIImage imageWithData: imageData];
-//
-//                 self.kittyImage.image = image;
-//
-//                 
-//             }
-//             
-//         }
-//         failure:^(NSURLSessionDataTask *task, NSError *error)
-//     {
-//         // Failure
-//         NSLog(@"Failure: %@", error);
-//     }];
-    
-//}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

@@ -24,6 +24,20 @@
 
     // Configure the view for the selected state
 }
+
+- (void)saveCatFact:(NSString *)catFact {
+    NSMutableArray *catFacts = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"factLabel"] mutableCopy];
+    
+    if (!catFacts) {
+        catFacts = [NSMutableArray array];
+    }
+    [catFacts addObject:catFact];
+    [[NSUserDefaults standardUserDefaults] setObject:catFacts forKey: @"factLabel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
+}
+
 - (IBAction)cellButtonTapped:(id)sender {
     
     
@@ -33,8 +47,7 @@
     [alertController addAction:ok];
     [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:alertController animated:YES completion:nil];
     
-    
-    [[NSUserDefaults standardUserDefaults] setObject:self.factLabel.text forKey: @"factLabel"];
+    [self saveCatFact:self.factLabel.text];
     
     
 //    self.factLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"factLabel"];

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51B9E80B1C2695840040724A /* CATFact.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9E80A1C2695840040724A /* CATFact.m */; };
+		51EDC0E61C3F8E5700882546 /* SavedFactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC0E41C3F8E5700882546 /* SavedFactCell.m */; };
+		51EDC0E71C3F8E5700882546 /* SavedFactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC0E51C3F8E5700882546 /* SavedFactCell.xib */; };
 		51F5B8861C272FEB00DEB1E1 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B8841C272FEB00DEB1E1 /* TableViewCell.m */; };
 		51F5B8871C272FEB00DEB1E1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F5B8851C272FEB00DEB1E1 /* TableViewCell.xib */; };
 		51F5B8901C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B88F1C274ED600DEB1E1 /* C4QSavedFactsTableViewController.m */; };
@@ -30,6 +32,9 @@
 		51B9E8081C266ECF0040724A /* ColorPickerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewControllerDelegate.h; sourceTree = "<group>"; };
 		51B9E8091C2695840040724A /* CATFact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATFact.h; sourceTree = "<group>"; };
 		51B9E80A1C2695840040724A /* CATFact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATFact.m; sourceTree = "<group>"; };
+		51EDC0E31C3F8E5700882546 /* SavedFactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedFactCell.h; sourceTree = "<group>"; };
+		51EDC0E41C3F8E5700882546 /* SavedFactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedFactCell.m; sourceTree = "<group>"; };
+		51EDC0E51C3F8E5700882546 /* SavedFactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedFactCell.xib; sourceTree = "<group>"; };
 		51F5B8831C272FEB00DEB1E1 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		51F5B8841C272FEB00DEB1E1 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		51F5B8851C272FEB00DEB1E1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -123,6 +128,9 @@
 				51F5B8831C272FEB00DEB1E1 /* TableViewCell.h */,
 				51F5B8841C272FEB00DEB1E1 /* TableViewCell.m */,
 				51F5B8851C272FEB00DEB1E1 /* TableViewCell.xib */,
+				51EDC0E31C3F8E5700882546 /* SavedFactCell.h */,
+				51EDC0E41C3F8E5700882546 /* SavedFactCell.m */,
+				51EDC0E51C3F8E5700882546 /* SavedFactCell.xib */,
 				51B9E8091C2695840040724A /* CATFact.h */,
 				51B9E80A1C2695840040724A /* CATFact.m */,
 				8D87530F1C24774800BBD328 /* Assets.xcassets */,
@@ -204,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8753131C24774800BBD328 /* LaunchScreen.storyboard in Resources */,
+				51EDC0E71C3F8E5700882546 /* SavedFactCell.xib in Resources */,
 				51F5B8871C272FEB00DEB1E1 /* TableViewCell.xib in Resources */,
 				8D8753101C24774800BBD328 /* Assets.xcassets in Resources */,
 				8D87530E1C24774700BBD328 /* Main.storyboard in Resources */,
@@ -271,6 +280,7 @@
 				51B9E80B1C2695840040724A /* CATFact.m in Sources */,
 				8D8753051C24774700BBD328 /* main.m in Sources */,
 				51F5B8861C272FEB00DEB1E1 /* TableViewCell.m in Sources */,
+				51EDC0E61C3F8E5700882546 /* SavedFactCell.m in Sources */,
 				8DA03F741C2499F400328B53 /* C4QCatFactsDetailViewController.m in Sources */,
 				8D610EA41C2477EB00AADDC2 /* C4QViewController.m in Sources */,
 				8D610EA11C2477EB00AADDC2 /* C4QColorPickerViewController.m in Sources */,

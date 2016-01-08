@@ -34,6 +34,9 @@
 
 -(void)didSelectColor:(UIColor *)color {
     self.view.backgroundColor = color;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 @end

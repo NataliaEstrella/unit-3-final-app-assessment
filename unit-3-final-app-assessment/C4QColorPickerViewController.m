@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *redButton;
 @property (weak, nonatomic) IBOutlet UIButton *greenButton;
 
-@property (nonatomic) UIColor *currentColor;
+//@property (nonatomic) UIColor *currentColor;
 
 
 @end
@@ -27,29 +27,29 @@
     self.blueButton.backgroundColor = [UIColor blueColor];
     self.greenButton.backgroundColor = [UIColor greenColor];
     self.redButton.backgroundColor = [UIColor redColor];
-    
-    [self.delegate didSelectColor:self.currentColor];
+
+//    [self.delegate didSelectColor:self.currentColor];
 
 }
 - (IBAction)redButtonTapped:(id)sender {
-    self.currentColor = [UIColor redColor];
-    [self.delegate didSelectColor:self.currentColor];
-//    [self.delegate didSelectColor:[UIColor redColor]];
+//    self.currentColor = [UIColor redColor];
+//    [self.delegate didSelectColor:self.currentColor];
+    [self.delegate didSelectColor:[UIColor redColor]];
 
     
 }
 
 - (IBAction)greenButtonTaped:(id)sender {
-    self.currentColor = [UIColor greenColor];
-    [self.delegate didSelectColor:self.currentColor];
+//    self.currentColor = [UIColor greenColor];
+//    [self.delegate didSelectColor:self.currentColor];
 
-//    [self.delegate didSelectColor:[UIColor greenColor]];
+    [self.delegate didSelectColor:[UIColor greenColor]];
 
 
 }
 
 - (IBAction)blueButtonTapped:(id)sender {
-    self.currentColor = [UIColor blueColor];
+//    self.currentColor = [UIColor blueColor];
     [self.delegate didSelectColor:[UIColor blueColor]];
 
 

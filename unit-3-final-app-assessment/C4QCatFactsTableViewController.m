@@ -33,15 +33,18 @@
         [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"CustomCellID"];
 
     self.factsArray = [[NSMutableArray alloc] init];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    //
+    self.tableView.estimatedRowHeight = 80;
+
 }
 - (IBAction)saveButtonTapped:(id)sender {
 
-
-
-
-
     
 }
+
 
 -(void) catFactRequest {
     
@@ -106,10 +109,10 @@
     [self performSegueWithIdentifier:@"detailView" sender:indexPath];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return UITableViewAutomaticDimension;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    return UITableViewAutomaticDimension;
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];

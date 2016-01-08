@@ -15,19 +15,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="366" height="63"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-d5-GL1">
-                        <rect key="frame" x="8" y="8" width="300" height="47"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-d5-GL1">
+                        <rect key="frame" x="10" y="2" width="306" height="59"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXP-Px-gDC">
-                        <rect key="frame" x="308" y="8" width="50" height="47"/>
-                        <color key="backgroundColor" red="1" green="0.90415949923547401" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXP-Px-gDC">
+                        <rect key="frame" x="318" y="12" width="40" height="40"/>
                         <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="4N5-YV-JuX"/>
+                            <constraint firstAttribute="height" constant="40" id="J0V-h7-f1B"/>
                             <constraint firstAttribute="width" constant="50" id="m6r-gr-5Ga"/>
+                            <constraint firstAttribute="width" constant="40" id="yAI-rP-AZy"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="heart"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4N5-YV-JuX"/>
+                                <exclude reference="m6r-gr-5Ga"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <action selector="cellButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FjL-fq-FEc"/>
                         </connections>
@@ -35,13 +43,28 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="eXP-Px-gDC" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Buv-sm-wCF"/>
-                    <constraint firstItem="IWp-d5-GL1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Pht-oT-YC3"/>
+                    <constraint firstAttribute="bottom" secondItem="IWp-d5-GL1" secondAttribute="bottom" constant="2" id="EsV-Jd-YNk"/>
+                    <constraint firstItem="eXP-Px-gDC" firstAttribute="leading" secondItem="IWp-d5-GL1" secondAttribute="trailing" constant="2" id="Ifo-iz-0Pb"/>
+                    <constraint firstItem="eXP-Px-gDC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OhX-CF-vbi"/>
+                    <constraint firstItem="IWp-d5-GL1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="Pht-oT-YC3"/>
                     <constraint firstItem="eXP-Px-gDC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="R30-j2-3YT"/>
+                    <constraint firstItem="eXP-Px-gDC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YDd-mb-jCb"/>
+                    <constraint firstItem="IWp-d5-GL1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="aQt-FX-Ovn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="eXP-Px-gDC" secondAttribute="bottom" id="bbU-Ly-xDR"/>
                     <constraint firstItem="IWp-d5-GL1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="l21-oG-2b5"/>
                     <constraint firstAttribute="bottomMargin" secondItem="IWp-d5-GL1" secondAttribute="bottom" id="lvO-4a-KQq"/>
                     <constraint firstItem="eXP-Px-gDC" firstAttribute="leading" secondItem="IWp-d5-GL1" secondAttribute="trailing" id="sQV-2m-Jkq"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="l21-oG-2b5"/>
+                        <exclude reference="lvO-4a-KQq"/>
+                        <exclude reference="OhX-CF-vbi"/>
+                        <exclude reference="R30-j2-3YT"/>
+                        <exclude reference="bbU-Ly-xDR"/>
+                        <exclude reference="sQV-2m-Jkq"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellButton" destination="eXP-Px-gDC" id="Fda-jB-JqZ"/>
@@ -50,4 +73,7 @@
             <point key="canvasLocation" x="252" y="176"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" width="290" height="290"/>
+    </resources>
 </document>

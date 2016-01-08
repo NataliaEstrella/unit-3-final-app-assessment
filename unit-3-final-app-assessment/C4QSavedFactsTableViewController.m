@@ -8,11 +8,13 @@
 
 #import "C4QSavedFactsTableViewController.h"
 #import "TableViewCell.h"
+#import "SavedFactCell.h"
 
 
 @interface C4QSavedFactsTableViewController ()
 
-@property (nonatomic) NSString *factString;
+//@property (nonatomic) NSString *factString;
+//@property (nonatomic) NSMutableArray *factString;
 
 @end
 
@@ -20,22 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.savedCatFacts = [[NSUserDefaults standardUserDefaults] arrayForKey:@"factLabel"];
     
-    self.savedCatFacts = [[NSMutableArray alloc] init];
-    self.factString = [[NSUserDefaults standardUserDefaults]  objectForKey:@"factLabel"];
-    
-    [self.savedCatFacts addObject:self.factString];
-    
-//    self.savedCatFacts = [NSArray arrayWithObjects:self.factString];
-//    [self.savedCatFacts addObject:self.factString];
-    
-//    [self.savedCatFacts addObject:self.factString];
-    
-    
-//    self.savedCatFacts = [NSMutableArray arrayWithObjects:self.factString, nil];
-    
-    
+    /////////////////////I am the one who nibs//////////////////
+    [self.tableView registerNib:[UINib nibWithNibName:@"SavedFactCell" bundle:nil] forCellReuseIdentifier:@"SavedFactCell"];
 
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
+    self.tableView.estimatedRowHeight = 80;
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,14 +52,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier"];
-
- //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SavedCellIdentifier" forIndexPath:indexPath];
-
-    cell.textLabel.text = self.savedCatFacts[indexPath.row];
     
-
+     SavedFactCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SavedFactCell"];
     
+    cell.savedFactCellLabel.text = self.savedCatFacts[indexPath.row];
+
     return cell;
 }
 
